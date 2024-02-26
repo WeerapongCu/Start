@@ -1,3 +1,3 @@
-module example.com/first-app
+module example.com/inverstment-calculator
 
 go 1.21.5
