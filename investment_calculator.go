@@ -11,13 +11,16 @@ func main() {
 	var years float64
 	var expactedReturnRate float64
 
-	fmt.Print("Investment Amount: ")
+	//fmt.Print("Investment Amount: ")
+	outputText("Investment Amount: ")
 	fmt.Scan(&investmentAmount)
 
-	fmt.Print("Expected Return Rate: ")
+	//fmt.Print("Expected Return Rate: ")
+	outputText("Expected Return Rate: ")
 	fmt.Scan(&expactedReturnRate)
 
-	fmt.Print("Years: ")
+	//fmt.Print("Years: ")
+	outputText("Years: ")
 	fmt.Scan(&years)
 
 	futureValue := investmentAmount * math.Pow(1 + expactedReturnRate / 100, years)
@@ -27,7 +30,13 @@ func main() {
 	formattedRFV := fmt.Sprintf("Future Value (adjusted for Inflation): %.1f\n", futureRealValue)
 	// fmt.Println("Future Value:", futureValue)
 	// fmt.Println("Future Value (adjusted for Inflation)", futureRealValue)
-	//fmt.Printf("Future Valur: %.0f\nFuture Value (adjusted for Inflation): %.0f",futureValue,futureRealValue)
+	// fmt.Printf(`Future Valur: %.1f\n
+
+	// Future Value (adjusted for Inflation): %.1f`,futureValue,futureRealValue)
 	//fmt.Println("Future Value (adjusted for Inflation):", futureRealValue)
 	fmt.Print(formattedFV, formattedRFV)
+}
+
+func outputText(text string) {
+	fmt.Print(text)
 }
